@@ -1,0 +1,1 @@
+select mhs_nama, mk_nama, nilai from tb_mahasiswa_nilai inner join tb_mahasiswa on tb_mahasiswa_nilai.mhs_id = tb_mahasiswa.mhs_id join tb_matakuliah on tb_mahasiswa_nilai.mk_id = tb_matakuliah.mk_id where nilai =(select max(nilai)from tb_mahasiswa_nilai) group by mhs_nama
